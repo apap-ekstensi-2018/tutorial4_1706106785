@@ -17,14 +17,12 @@ public class StudentServiceDatabase implements StudentService
     @Autowired
     private StudentMapper studentMapper;
 
-
     @Override
     public StudentModel selectStudent (String npm)
     {
         log.info ("select student with npm {}", npm);
         return studentMapper.selectStudent (npm);
     }
-
 
     @Override
     public List<StudentModel> selectAllStudents ()
@@ -33,13 +31,11 @@ public class StudentServiceDatabase implements StudentService
         return studentMapper.selectAllStudents ();
     }
 
-
     @Override
     public void addStudent (StudentModel student)
     {
         studentMapper.addStudent (student);
     }
-
 
     @Override
     public void deleteStudent (String npm)
