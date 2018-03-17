@@ -46,8 +46,7 @@ public class StudentController
 
         return "success-add";
     }
-
-
+    
     @RequestMapping("/student/view")
     public String view (Model model,
             @RequestParam(value = "npm", required = false) String npm)
